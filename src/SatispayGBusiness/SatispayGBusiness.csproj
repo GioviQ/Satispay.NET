@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Satispay.NET</PackageId>
+    <AssemblyName>SatispayGBusiness</AssemblyName>
+    <RootNamespace>SatispayGBusiness</RootNamespace>
+    <LangVersion>preview</LangVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.4</Version>
+    <Authors>Giovanni Quarella</Authors>
+    <PackageTags>satispay</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIcon>icon.png</PackageIcon>
+    <Description>Satispay C# API client based on https://developers.satispay.com/reference</Description>
+    <RepositoryUrl>https://github.com/GioviQ/Satispay.NET</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/GioviQ/Satispay.NET</PackageProjectUrl>
+    <PackageIconUrl />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.8" />
+    <PackageReference Include="System.Net.Http.Json" Version="3.2.1" />
+  </ItemGroup>
+
+</Project>
