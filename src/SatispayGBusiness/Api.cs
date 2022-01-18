@@ -167,7 +167,7 @@ namespace SatispayGBusiness
                 }
                 catch (HttpRequestException)
                 {
-                    throw new SatispayException(stringContent, response.StatusCode); 
+                    throw new SatispayException(stringContent, response.StatusCode);
                 }
                 catch (JsonException)
                 {
@@ -201,6 +201,9 @@ namespace SatispayGBusiness
 
         public async Task<CreatePaymentResponse<T>> CreatePayment<T>(CreatePaymentRequest<T> request, string idempotencyKey = null)
         {
+            if (request.amount_unit == 0)
+                throw new SatispayException("amount_unit must be greater than 0", HttpStatusCode.BadRequest);
+
             var response = await SendJsonAsync<CreatePaymentResponse<T>>(HttpMethod.Post, "payments", request, idempotencyKey);
 
             //TODO
