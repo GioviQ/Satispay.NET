@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 6.x
     - name: Restore NuGet Packages
-      run: nuget restore SatispayGBusiness.sln
+      run: nuget restore .\src\SatispayGBusiness.sln
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.1
     - name: Build app for release
