@@ -12,6 +12,7 @@ using System.Net.Http.Json;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace SatispayGBusiness
@@ -114,7 +115,7 @@ namespace SatispayGBusiness
             if (content != null)
                 requestJson = JsonSerializer.Serialize(content, new JsonSerializerOptions()
                 {
-                    IgnoreNullValues = true,
+                    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
                     WriteIndented = true
                 });
 
