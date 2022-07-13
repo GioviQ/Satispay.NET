@@ -23,6 +23,8 @@ namespace SatispayGBusiness.Models
         public string callback_url { get; set; }
         public T metadata { get; set; }
         public string consumer_uid { get; set; }
+
+        public string redirect_url { get; set; } = "";
     }
 
     public class CreatePaymentRequest : CreatePaymentRequest<object>
