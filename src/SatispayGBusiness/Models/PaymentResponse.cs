@@ -33,5 +33,8 @@ namespace SatispayGBusiness.Models
 
         //Order ID or payment external identifier
         public string external_code { get; set; }
+
+        //https://online.satispay.com/pay/41da7b74-a9f4-4d25-8428-0e3e460d90c1?redirect_url=https%3A%2F%2FmyServer.com%2FmyRedirectUrl
+        public string redirect_url { get; set; }
     }
 }
